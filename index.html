@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brihath - Innovative Creations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+            animation: fadeIn 2s ease-in;
+        }
+        /* Starfield Background */
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #000 0%, #111 100%);
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ffcc; }
+            to { text-shadow: 0 0 30px #00ffcc; }
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeIn 1s ease-in 0.5s both;
+        }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .app-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffcc;
+        }
+        .app-card a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="starfield"></div>
+    <header>
+        <h1>Brihath</h1>
+        <p>Unlocking Worlds of Innovation and Wonder</p>
+    </header>
+    <section id="apps">
+        <h2>Our Creations</h2>
+        <div class="app-grid">
+            <div class="app-card">
+                <h3>Third Eye Timer</h3>
+                <p>A powerful tool for mindfulness and productivity.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.thirdeyetimer.app" target="_blank">Explore Now</a>
+            </div>
+            <div class="app-card">
+                <h3>App 2</h3>
+                <p>Coming Soon – Stay Tuned for Epic Adventures.</p>
+            </div>
+            <div class="app-card">
+                <h3>App 3</h3>
+                <p>Coming Soon – Innovation on the Horizon.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Brihath</h2>
+        <p>Brihath is a realm of boundless creativity, where ideas transform into awe-inspiring realities across platforms. We craft experiences that inspire wonder and push the boundaries of what's possible.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out at <a href="mailto:hello@brihath.com" style="color: #00ffcc;">hello@brihath.com</a> for collaborations or support.</p>
+    </section>
+    <footer>
+        &copy; 2025 Brihath. All rights reserved. | <a href="/privacy-policy.html" style="color: #00ffcc;">Privacy Policy</a>
+    </footer>
+    <script>
+        // Generate starfield
+        const starfield = document.getElementById('starfield');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = star.style.height = Math.random() * 2 + 'px';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 5 + 's';
+            starfield.appendChild(star);
+        }
+    </script>
+</body>
+</html>
