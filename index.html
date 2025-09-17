@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brihath - Innovative Creations</title>
+    <link rel="icon" type="image/svg+xml" href="third-eye-icon.svg">
+    <link rel="apple-touch-icon" href="third-eye-icon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -287,6 +289,24 @@
             border-color: var(--primary);
         }
 
+        .app-icon {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-icon img {
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 255, 204, 0.2);
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 4px 16px rgba(255, 215, 0, 0.3));
+        }
+
+        .app-icon img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 12px 48px rgba(0, 255, 204, 0.3);
+        }
+
         .app-card h3 {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
@@ -491,6 +511,9 @@
         <h2>Our Creations</h2>
         <div class="app-grid">
             <div class="app-card fade-in">
+                <div class="app-icon">
+                    <img src="third-eye-icon.svg" alt="Third Eye Timer Icon" width="80" height="80">
+                </div>
                 <h3>Third Eye Timer</h3>
                 <p>Transform your meditation practice with 100+ guided meditations, real-time heart rate tracking, and a comprehensive achievements system. Build daily meditation streaks, track your progress, and unlock your inner potential through scientifically-backed mindfulness techniques.</p>
                 <a href="https://play.google.com/store/apps/details?id=com.thirdeyetimer.app" target="_blank">Download</a>
