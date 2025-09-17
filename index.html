@@ -6,11 +6,6 @@
     <title>Brihath - Innovative Creations</title>
     
     <!-- App Icons -->
-    <link rel="icon" type="image/png" href="thirdeye.png">
-    <link rel="apple-touch-icon" href="thirdeye.png">
-    <link rel="shortcut icon" href="thirdeye.png">
-    <meta name="msapplication-TileImage" content="thirdeye.png">
-    <meta name="msapplication-TileColor" content="#00ffcc">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -294,6 +289,21 @@
             border-color: var(--primary);
         }
 
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin: 0 auto 1.5rem;
+            display: block;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-hover);
+        }
+
         .app-card h3 {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
@@ -498,6 +508,7 @@
         <h2>Our Creations</h2>
         <div class="app-grid">
             <div class="app-card fade-in">
+                <img src="thirdeye.png" alt="Third Eye Timer" class="app-icon">
                 <h3>Third Eye Timer</h3>
                 <p>Transform your meditation practice with 100+ guided meditations, real-time heart rate tracking, and a comprehensive achievements system. Build daily meditation streaks, track your progress, and unlock your inner potential through scientifically-backed mindfulness techniques.</p>
                 <a href="https://play.google.com/store/apps/details?id=com.thirdeyetimer.app" target="_blank">Download</a>
